@@ -1,0 +1,111 @@
+$font-family: 'Montserrat', sans-serif;
+
+.logOutButton {
+  background-color: #cecece;
+  color: #66645E;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #cf649aca;
+    color: #fff;
+    outline: none; 
+    border-color: #66645E; 
+    
+  }
+}
+
+.primaryButton {
+  background-color: #cf649aca;
+  color: #fff;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+  &:hover{
+    background-color: #cecece;
+    border-color: #66645E;
+  }
+}
+
+.secondaryButton {
+  font-family: $font-family;
+  font-weight: 600;
+  color:#66645E;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border-color: #cf649aca;
+  background-color: #FBF8F8;
+  transition: background-color 0.3s;
+  font-size: 12px;
+  margin-top: 10px;
+
+  &:hover {
+    border-color: #66645E; 
+    background-color: #cf649aca;
+    border: 1px solid; 
+  }
+}
+
+.regLogForm{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.regLogInput {
+  border: 1px solid #bdbcbc; 
+  border-radius: 15px; 
+  padding: 10px; 
+  font-size: 16px; 
+  outline: none; 
+  width: 400px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s;
+}
+
+select.regLogInput {
+    border: 1px solid #bdbcbc; 
+    border-radius: 15px; 
+    padding: 10px; 
+    font-size: 16px; 
+    outline: none; 
+    width: 422px;
+    height: 43px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+  }
+
+.regLogInput:focus {
+  border-color: #cf649aca; 
+}
+
+.regLogInput::placeholder {
+  color: #D0D0D0;
+  font-family: $font-family;
+}
+
+.regLogContainer{
+  margin-top: 200px;
+}
+
+
+
+.logRegAddInfo {
+  font-size: 18px;
+}
+
+.regLogHeader{
+  font-family: $font-family;
+        margin-top: 50px;
+        font-weight: 500;
+        font-size: 22px;
+        margin-bottom:22px
+}

@@ -1,0 +1,73 @@
+$font-family: 'Montserrat', sans-serif;
+
+.navbar {
+  position: fixed;
+  top: 10px; /* учитываем отступ сверху */
+  left: 50%; /* располагаем навбар относительно центра */
+  transform: translateX(-50%); /* сдвигаем навбар обратно на половину его ширины */
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #808080;
+  border-radius: 15px;
+  background-color: #f1f0ed;
+  z-index: 999;
+  box-shadow: 0px -20px 10px #ffffff;
+
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+}
+
+.nameProject {
+  font-family: 'Italiana', sans-serif;
+  font-size: 28px;
+  color: #66645e;
+  letter-spacing: 3px;
+}
+
+.navbar .link {
+  text-decoration: none;
+}
+
+.navbarBtnGrey {
+  font-family: $font-family;
+  font-weight: 600;
+  color: #66645e;
+  padding: 10px 20px;
+  border-radius: 15px;
+
+  &:hover {
+    border-color: #66645e;
+    background-color: #cf649aca;
+    color: #fff;
+    border: 1px solid;
+  }
+}
+
+.navbar .navbarBtn {
+  background-color: #cf649aca;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.navbar .navbarBtn:hover {
+  background-color: #cecece;
+}
+
+.navbar .navbarBtnGrey .navbarBtn:focus,
+.navbar .navbarBtnGrey .navbarBtn:focus-visible {
+  outline: none;
+}
+
+.mockforNavBar {
+  width: 100px;
+}
