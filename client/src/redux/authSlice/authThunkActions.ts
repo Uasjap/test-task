@@ -5,7 +5,7 @@ import { clearUser, setUser } from "./authSlice";
 
 
 export const fetchSignUp = createAsyncThunk<User, DataType>('SignUp', async (data: DataType, {dispatch}) => {
-    const response = await axios.post<User>(`${import.meta.env.VITE_URL}/reg`, data, {
+    const response = await axios.post<User>(`http://localhost:3000/reg`, data, {
         withCredentials: true,
     });
     if (response.status === 200) {
@@ -17,7 +17,7 @@ export const fetchSignUp = createAsyncThunk<User, DataType>('SignUp', async (dat
 })
 
 export const fetchSignIn = createAsyncThunk<User, LoginData>('SignIn', async (data: LoginData, {dispatch}) => {
-  const response = await axios.post<User>(`${import.meta.env.VITE_URL}/log`, data, {
+  const response = await axios.post<User>(`http://localhost:3000/log`, data, {
       withCredentials: true,
   })
 
@@ -34,7 +34,7 @@ export const fetchSignIn = createAsyncThunk<User, LoginData>('SignIn', async (da
 
 export const fetchSignOut = createAsyncThunk('SignOut', async (_, {dispatch}) => {
     try {
-        const response = await axios.get<AxiosResponse>(`${import.meta.env.VITE_URL}/logout`, {
+        const response = await axios.get<AxiosResponse>(`http://localhost:3000/logout`, {
             withCredentials: true
         })
         dispatch(clearUser());
@@ -47,14 +47,14 @@ export const fetchSignOut = createAsyncThunk('SignOut', async (_, {dispatch}) =>
 
 
 export const checkUser = createAsyncThunk<User, DataType>('CheckUser', async (data, {dispatch}) => {
-    const response = await axios.get<AxiosResponse>(`${import.meta.env.VITE_URL}/`, {
+    const response = await axios.get<AxiosResponse>(`http://localhost:3000/`, {
       withCredentials: true,
     });
     dispatch(setUser(response.data));
     return response.data
   })
   export const fetchUpdateUser = createAsyncThunk<User, User>('UpdateUser', async (newData: User, {dispatch}) => {
-    const response = await axios.put<User>(`${import.meta.env.VITE_URL}/update`, newData, {
+    const response = await axios.put<User>(`http://localhost:3000/update`, newData, {
         withCredentials: true,
     });
     dispatch(setUser(response.data))
@@ -63,7 +63,7 @@ export const checkUser = createAsyncThunk<User, DataType>('CheckUser', async (da
 
 export const fetchUsers = createAsyncThunk('fetchUsers', async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_URL}/people`, {
+      const response = await axios.get(`http://localhost:3000/people`, {
         withCredentials: true,
       });
       return response.data;
